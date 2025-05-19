@@ -1,0 +1,44 @@
+name: "Cloudflare DDNS"
+version: "1.0.0"
+slug: "cloudflare_ddns"
+
+description: >-
+  Automatically keep your Cloudflare DNS records in sync with your home IP,
+  using cloudflare-ddns from Timothy Miller https://github.com/timothymiller/cloudflare-ddns.
+
+startup: "application"
+init: false
+
+arch:
+  - amd64
+  - aarch64
+  - armv7
+  - armhf
+  - i386
+
+map:
+  - addon_config
+
+options:
+  cloudflare:
+    - api_token: "XXXXXXXXXXXXXXX"
+      zone_id: "YYYYYYYYYYYYYY"
+      name: "homeassistant"
+      proxied: false
+  a: true
+  aaaa: false
+  purgeUnknownRecords: false
+  ttl: 300
+  update_interval: 300
+
+schema:
+  cloudflare:
+    - api_token: "str"
+      zone_id: "str"
+      name: "str"
+      proxied: bool
+  a: bool
+  aaaa: bool
+  purgeUnknownRecords: bool
+  ttl: int
+  update_interval: int
