@@ -1,13 +1,13 @@
 name: "Cloudflare DDNS"
 version: "1.0.0"
 slug: "cloudflare_ddns"
-url: "https://github.com/fradaloisio/homeassistant-cloudflared-ddns"
+url: "https://github.com/fradaloisio/homeassistant-cloudflare-ddns"
 
 description: >-
   Automatically keep your Cloudflare DNS records in sync with your home IP,
   using cloudflare-ddns from Timothy Miller https://github.com/timothymiller/cloudflare-ddns.
 
-image: "fdaloisio/cloudflared-ddns-{arch}"
+image: "fdaloisio/cloudflare-ddns-{arch}"
 
 startup: "application"
 init: false
