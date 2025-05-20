@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=alpine:3.21.3
 FROM $BUILD_FROM
 
 # Install Python 3 and pip
